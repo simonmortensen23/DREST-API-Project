@@ -17,7 +17,11 @@ if os.path.exists('env.py'):
     import env
 
 CLOUDINARY_STORAGE = {
+    'CLOUDINARY_NAME': os.environ.get('CLOUD_NAME'),
+    'CLOUDINARY_API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
+    'CLOUDINARY_API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
     'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
+
 }
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
