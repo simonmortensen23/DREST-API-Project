@@ -25,7 +25,7 @@ class Post(models.Model):
     image = models.ImageField(
         upload_to='images/', default='../default_post_ka1fub', blank=True
     )
-    image_filer = models.CharField(
+    image_filter = models.CharField(
         max_length=32, choices=image_filter_choices, default='normal'
     )
 
